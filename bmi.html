@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+      Chiều Cao:<input id="chieucao" type="number">
+      <br>
+      Cân nặng:<input id="cannang" type="number">
+      <br>
+<button onclick="BMI()" type="button">BMI</button>
+      <span id="result"></span>
+<script>
+    function BMI() {
+        let chieucao=parseFloat(document.getElementById('chieucao').value);
+        let cannang=parseFloat(document.getElementById('cannang').value);
+        let result=cannang/(chieucao*chieucao);
+        document.getElementById('result').innerHTML=result;
+        if (result<18.5){
+          document.write('gầy');
+        }else if (result<25.0){
+            document.write('bình thường');
+        }else if (result<30.0) {
+            document.write('béo');
+        }else {
+            document.write('béo phì');
+        }
+
+    }
+</script>
+
+
+</body>
+</html>
